@@ -57,20 +57,28 @@ public class Home extends AppCompatActivity {
 
     private void addItem(){
         // DummyData
+        arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.xosomienbac, "https://xsmb.me/"));
+        arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.xosomiennam, "https://xsmn.me/"));
+        arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.soxomientrung, "https://xsmn.me/xsmt-sxmt-kqxsmt-ket-qua-xo-so-mien-trung.html"));
+        arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.vietlott, "https://www.minhngoc.net.vn/ket-qua-xo-so/dien-toan-vietlott.html"));
+        arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.vtv1, "https://vtv.vn/truyen-hinh-truc-tuyen/vtv1.htm"));
+        arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.vtv2, "https://vtv.vn/truyen-hinh-truc-tuyen/vtv2.htm"));
+        arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.vtv3, "https://vtv.vn/truyen-hinh-truc-tuyen/vtv3.htm"));
+        arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.vtv4, "https://vtv.vn/truyen-hinh-truc-tuyen/vtv4.htm"));
+        arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.vtv5, "https://vtv.vn/truyen-hinh-truc-tuyen/vtv5.htm"));
+        arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.vtv6, "https://vtv.vn/truyen-hinh-truc-tuyen/vtv6.htm"));
+        arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.vtv7, "https://vtv.vn/truyen-hinh-truc-tuyen/vtv7.htm"));
         arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.baomoi, "https://baomoi.com/"));
         arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.bongdaplus, "https://bongdaplus.vn/"));
         arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.dantri, "https://dantri.com.vn/"));
         arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.genk, "https://genk.vn/"));
         arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.kenh14, "https://kenh14.vn/"));
         arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.nguoiduatin, "https://www.nguoiduatin.vn/"));
-
         arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.nguoilaodong, "https://nld.com.vn//"));
         arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.nhandan, "https://nhandan.vn/"));
         arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.thanhnien, "https://thanhnien.vn/"));
         arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.tinhte, "https://tinhte.vn/"));
         arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.tinmoi, "https://tinmoi.vn/"));
-
-
         arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.tuoitre, "https://tuoitre.vn/"));
         arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.vietnamnet, "https://vietnamnet.vn/"));
         arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.vietnamplus, "https://www.vietnamplus.vn/"));

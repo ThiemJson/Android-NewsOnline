@@ -13,6 +13,7 @@ import android.webkit.WebViewClient;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import teneocto.thiemjason.newsonline.R;
 import teneocto.thiemjason.newsonline.ui.progressdialog.CustomProgressDialog;
@@ -21,6 +22,7 @@ import teneocto.thiemjason.newsonline.utils.AppConst;
 public class NewsDetail extends AppCompatActivity {
     CustomProgressDialog customProgressDialog;
     WebView mWebView;
+    FloatingActionButton floatingActionButton;
     AdView adView1;
     AdView adView2;
 
@@ -29,6 +31,8 @@ public class NewsDetail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news_detail);
         customProgressDialog = new CustomProgressDialog(this);
+        floatingActionButton= findViewById(R.id.news_web_view_ads_view_button);
+        floatingActionButton.setOnClickListener(v -> finish());
 
         mWebView = findViewById(R.id.news_web_view);
         loadAd();

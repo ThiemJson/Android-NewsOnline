@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/home_news_item_image"
-        android:layout_width="85dp"
-        android:layout_height="85dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:adjustViewBounds="true"
         android:src="@drawable/nhandan"
         app:layout_constraintEnd_toEndOf="parent"
