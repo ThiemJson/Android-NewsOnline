@@ -10,6 +10,10 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import teneocto.thiemjason.newsonline.R;
 import teneocto.thiemjason.newsonline.ui.progressdialog.CustomProgressDialog;
 import teneocto.thiemjason.newsonline.utils.AppConst;
@@ -17,6 +21,8 @@ import teneocto.thiemjason.newsonline.utils.AppConst;
 public class NewsDetail extends AppCompatActivity {
     CustomProgressDialog customProgressDialog;
     WebView mWebView;
+    AdView adView1;
+    AdView adView2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +31,7 @@ public class NewsDetail extends AppCompatActivity {
         customProgressDialog = new CustomProgressDialog(this);
 
         mWebView = findViewById(R.id.news_web_view);
+        loadAd();
         webViewInitial();
     }
 
@@ -51,5 +58,26 @@ public class NewsDetail extends AppCompatActivity {
             }
         });
         mWebView.loadUrl(notificationURL);
+    }
+
+    /**
+     * Init Google AdsMob
+     */
+    void loadAd() {
+        MobileAds.initialize(this, initializationStatus -> {
+        });
+
+        adView1 = findViewById(R.id.news_web_view_ads_view);
+        adView2 = findViewById(R.id.news_web_view_ads_view_top);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView1.loadAd(adRequest);
+        adView2.loadAd(adRequest);
+    }
+
+    @Override
+    protected void onDestroy() {
+        adView1.destroy();
+        adView2.destroy();
+        super.onDestroy();
     }
 }

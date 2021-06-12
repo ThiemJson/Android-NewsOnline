@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import java.util.ArrayList;
 
 import teneocto.thiemjason.newsonline.R;
@@ -19,6 +23,8 @@ import teneocto.thiemjason.newsonline.utils.Utils;
 public class Home extends AppCompatActivity {
     private ArrayList<NewsDTO> arrayList = new ArrayList<>();
     private GridView mGridView;
+    private AdView adView1;
+    private AdView adView2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +40,19 @@ public class Home extends AppCompatActivity {
             intent.putExtra(AppConst.NEWS_URL, arrayList.get(position).getUrl());
             startActivity(intent);
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadAd();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        adView1.destroy();
+        adView2.destroy();
     }
 
     private void addItem(){
@@ -61,8 +80,19 @@ public class Home extends AppCompatActivity {
         arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.vtc, "https://vtc.vn/"));
         arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.xaluan, "https://www.xaluan.com/"));
         arrayList.add(new NewsDTO(Utils.getRandomUUID(), R.drawable.zing, "https://zingnews.vn/"));
+    }
 
+    /**
+     * Init Google AdsMob
+     */
+    void loadAd() {
+        MobileAds.initialize(this, initializationStatus -> {
+        });
 
-
+        adView1 = findViewById(R.id.home_web_view_ads_view);
+        adView2 = findViewById(R.id.home_web_view_ads_view_2);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView1.loadAd(adRequest);
+        adView2.loadAd(adRequest);
     }
 }

@@ -6,17 +6,42 @@
     android:layout_height="match_parent"
     tools:context=".ui.news.NewsDetail">
 
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/news_web_view_ads_view_top"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        ads:adSize="FULL_BANNER"
+        ads:adUnitId="ca-app-pub-9031583899744313/5474234404"
+        ads:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/news_web_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="709dp" />
+
     <WebView
         android:id="@+id/news_web_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_marginStart="3dp"
         android:layout_marginEnd="3dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/news_web_view_ads_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/news_web_view_ads_view_top"
         tools:layout_editor_absoluteX="248dp"
         tools:layout_editor_absoluteY="394dp" />
 
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/news_web_view_ads_view"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        ads:adSize="FULL_BANNER"
+        ads:adUnitId="ca-app-pub-9031583899744313/3045465890"
+        ads:layout_constraintTop_toBottomOf="@id/news_web_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="709dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
