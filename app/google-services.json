@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "459191136010",
+    "project_id": "newsonlone-cc63e",
+    "storage_bucket": "newsonlone-cc63e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459191136010:android:5a5f4d616ebf0208e154f3",
+        "android_client_info": {
+          "package_name": "teneocto.thiemjason.newsonline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "459191136010-s5f50n7ddb5o47uv0mq2hnucoppl5i71.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFjeOn1thmA5JezMg5aIgwEXDvJvdiJWY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "459191136010-s5f50n7ddb5o47uv0mq2hnucoppl5i71.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
